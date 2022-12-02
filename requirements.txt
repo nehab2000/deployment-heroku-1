@@ -5,3 +5,4 @@ Pandas>=0.19
 Jinja2==2.10.1
 certifi==2019.11.28
 itsdangerous==1.1.0
+scikit-learn==1.0.2
