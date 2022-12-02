@@ -1,0 +1,7 @@
+Flask==1.1.1
+gunicorn=19.9.0
+numpy>=1.9.2
+Pandas>=0.19
+Jinja2==2.10.1
+certifi==2019.11.28
+itsdangerous==1.1.0
