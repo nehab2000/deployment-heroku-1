@@ -24,17 +24,17 @@ def home():
     return render_template('index.html')
 
 @app.route('/getprediction',methods=['POST'])
-'''def getprediction():    
+def getprediction():    
 
     input = [float(x) for x in request.form.values()]
     final_input = [np.array(input)]
     prediction = model.predict(final_input)
 
-    return render_template('index.html', output='Predicted Crop Yield:{}'.format(prediction))'''
+    return render_template('index.html', output='Predicted Crop Yield:{}'.format(prediction))
 
-def getprediction(text_box_1,text_box_2,text_box_3,text_box_4,text_box_5,text_box_6,text_box_7,text_box_8,text_box_9,text_box_10,text_box_11,text_box_12,text_box_13,text_box_14,text_box_15,text_box_16,text_box_17):
-  classification = model.predict([[text_box_1,text_box_2,text_box_3,text_box_4,text_box_5,text_box_6,text_box_7,text_box_8,text_box_9,text_box_10,text_box_11,text_box_12,text_box_13,text_box_14,text_box_15,text_box_16,text_box_17]])
-  return classification[0]
+#def getprediction(text_box_1,text_box_2,text_box_3,text_box_4,text_box_5,text_box_6,text_box_7,text_box_8,text_box_9,text_box_10,text_box_11,text_box_12,text_box_13,text_box_14,text_box_15,text_box_16,text_box_17):
+  #classification = model.predict([[text_box_1,text_box_2,text_box_3,text_box_4,text_box_5,text_box_6,text_box_7,text_box_8,text_box_9,text_box_10,text_box_11,text_box_12,text_box_13,text_box_14,text_box_15,text_box_16,text_box_17]])
+  #return classification[0]
 
 if __name__ == "__main__":
     app.run(debug=True)
