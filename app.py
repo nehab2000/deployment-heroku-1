@@ -26,8 +26,8 @@ def home():
 @app.route('/getprediction',methods=['POST'])
 def getprediction():    
 
-    input = [float(x) for x in request.form.values()]
-    final_input = [np.array(input)]
+    data = [float(x) for x in request.form.values()]
+    final_input = [np.array(data)]
     prediction = model.predict(final_input)
 
     return render_template('index.html', output='Predicted Crop Yield:{}'.format(prediction))
