@@ -1,0 +1,73 @@
+body {
+  background-color: #1EE671;
+  font-family: Monaco, monospace;
+}
+
+
+.shimmer {
+  position: relative;
+  transition: all 0.2s ease-in;
+}
+
+.shimmer:hover {
+  color: white;
+  box-shadow: 0 0 20px 0;
+  background: #98f5ee;
+}
+
+.shimmer:hover:before {
+  animation: shimmer 0.5s 0s linear;
+}
+
+.shimmer:before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    opacity: 0;
+    background: white;
+    box-shadow: 0 0 10px 3px white;
+    transform: skewX(-20deg);
+}
+
+@keyframes shimmer {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+  
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  display: inline-block;
+}
+
+a {
+  color: black;
+  background-color: #42FF91;
+  font-family: Monaco;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 26px;
+  padding-right: 26px;
+  border: 1px solid green;
+}
