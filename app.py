@@ -32,6 +32,19 @@ def getprediction():
 
     return render_template('index.html', output='Predicted Crop Yield:{} Bushels per Acre'.format(prediction[0]))
 
+@app.route('/feature_definitions', methods=['GET', 'POST'])
+def feature_definitions():
+    if request.method == 'POST':
+        # do stuff when the form is submitted
+
+        # redirect to end the POST handling
+        # the redirect can be to the same route or somewhere else
+        return redirect(url_for('index'))
+
+    # show the form, it wasn't submitted
+    return render_template('feature_definitions.html')
+
+
 #def getprediction(text_box_1,text_box_2,text_box_3,text_box_4,text_box_5,text_box_6,text_box_7,text_box_8,text_box_9,text_box_10,text_box_11,text_box_12,text_box_13,text_box_14,text_box_15,text_box_16,text_box_17):
   #classification = model.predict([[text_box_1,text_box_2,text_box_3,text_box_4,text_box_5,text_box_6,text_box_7,text_box_8,text_box_9,text_box_10,text_box_11,text_box_12,text_box_13,text_box_14,text_box_15,text_box_16,text_box_17]])
   #return classification[0]
