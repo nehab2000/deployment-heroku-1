@@ -8,9 +8,8 @@
 <body>
  <div>
 	<h1>Predict Spring Wheat Yield &#127806;</h1>
-  <a href="feature_definitions.html" class='shimmer'>Feature Definitions</a>
+  <form action="{{ url_for('feature_definitions')}}"method="get" class='shimmer'><button type="submit">Feature Definitions</button></form>
 
-   <br>
    <br>
 
     <form action="{{ url_for('getprediction')}}"method="post">
