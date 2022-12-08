@@ -13,7 +13,7 @@ Original file is located at
 #cd /drive/MyDrive/Flask
 
 import numpy as np
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect
 import pickle
 
 app = Flask(__name__)
@@ -39,7 +39,7 @@ def feature_definitions():
 
         # redirect to end the POST handling
         # the redirect can be to the same route or somewhere else
-        return redirect(url_for('index'))
+        return redirect('/')
 
     # show the form, it wasn't submitted
     return render_template('feature_definitions.html')
